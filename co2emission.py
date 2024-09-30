@@ -23,7 +23,7 @@ ttk.Entry(app, textvariable=mileage, width=10).grid(row=2, column=1)
 def prediction():
     global model
     query_data = {
-        'ENGINE_SIZE':[eval(engine_size.get())],
+        'ENGINESIZE':[eval(engine_size.get())],
         'CYLINDERS':[eval(cylinders.get())],
         'FUELCONSUMPTION_COMB':[eval(mileage.get())]}
     price = model.predict(pd.DataFrame(query_data))
